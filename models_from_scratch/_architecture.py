@@ -8,11 +8,14 @@ class BaseModel(ABC):
                  *,
                  max_iterations : int = 10**5,
                  patience : int = 100,
-                 lr : float = 1e-4) : 
+                 lr : float = 1e-4,
+                 verbose : bool = True) : 
         
         self.max_iterations = max_iterations
         self.patience = patience
         self.lr = lr  
+        self._verbose = verbose
+
 
         self._is_fitted : bool = False
         
